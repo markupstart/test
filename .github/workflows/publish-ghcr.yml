@@ -51,6 +51,6 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             BASE_IMAGE=quay.io/hummingbird-community/bootc-os:latest
-            ENABLE_FEDORA_RAWHIDE_REPO=${{ vars.ENABLE_FEDORA_RAWHIDE_REPO }}
-            COPR_REPO=${{ vars.COPR_REPO }}
-            COPR_CHROOT=${{ vars.COPR_CHROOT }}
+            ENABLE_FEDORA_RAWHIDE_REPO=${{ vars.ENABLE_FEDORA_RAWHIDE_REPO || '1' }}
+            COPR_REPO=${{ vars.COPR_REPO || 'avengemedia/dms' }}
+            COPR_CHROOT=${{ vars.COPR_CHROOT || 'fedora-rawhide-x86_64' }}
