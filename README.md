@@ -95,18 +95,6 @@ and test locally with the provided scripts:
 ./scripts/build-disk.sh
 ./scripts/run-qemu.sh
 ```
-
-To test on real hardware, burn the qcow2 disk image directly to a USB stick:
-
-```bash
-./scripts/build.sh
-./scripts/build-disk.sh
-# Check device name with: lsblk
-sudo dd if=output/qcow2/disk.qcow2 of=/dev/sdX bs=4M status=progress
-sudo sync
-# Boot from USB stick to start the installed system
-```
-
 Notes:
 
 - `scripts/build-disk.sh` copies your local Docker image into local Podman storage and creates `output/qcow2/disk.qcow2`.
