@@ -9,6 +9,7 @@ mesa-libgbm
 mesa-libGL
 mesa-dri-drivers
 vulkan-tools
+plymouth
 
 # Everyday desktop apps
 gnome-terminal
