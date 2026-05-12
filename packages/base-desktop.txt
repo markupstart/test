@@ -10,8 +10,6 @@ mesa-libGL
 mesa-dri-drivers
 vulkan-tools
 plymouth
-polkit-gnome
-polkit
 
 # Everyday desktop apps
 gnome-terminal
