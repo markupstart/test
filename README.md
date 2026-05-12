@@ -104,13 +104,13 @@ To test on real hardware, burn the qcow2 disk image directly to a USB stick:
 # Check device name with: lsblk
 sudo dd if=output/qcow2/disk.qcow2 of=/dev/sdX bs=4M status=progress
 sudo sync
-# Boot from USB stick and tuna-installer will launch for installation
+# Boot from USB stick to start the installed system
 ```
 
 Notes:
 
 - `scripts/build-disk.sh` copies your local Docker image into local Podman storage and creates `output/qcow2/disk.qcow2`.
-- Both the qcow2 and USB-burned image are bootable and will launch tuna-installer on first boot.
+- Both the qcow2 and USB-burned image are bootable.
 - The script auto-detects rootless Podman, switches to `--in-vm` mode automatically, and uses local cache directories under `.cache/`.
 - `scripts/run-qemu.sh` boots the newest qcow2 it finds under `output/`.
 - QEMU forwards `localhost:2222` to guest port `22` for optional SSH testing later.
@@ -194,51 +194,4 @@ After you push updates and CI publishes a new image:
 ```bash
 sudo bootc upgrade
 sudo systemctl reboot
-```
-
-## Installation with tuna-installer
-
-This image includes pre-configuration for [tuna-installer](https://github.com/tuna-os/tuna-installer), a graphical bootc installer. Users can install your image interactively with a friendly UI.
-
-### Customize for your repo
-
-Before publishing, update the tuna-installer config files with your actual GitHub username and repo:
-
-1. Edit `tuna-installer-images.json` and replace `YOUR_USER` with your GitHub username (e.g., `mark`).
-2. Update any image tags or descriptions as needed.
-
-The image will then show your branding in the installer UI.
-
-### Install from a live system
-
-1. Install tuna-installer Flatpak:
-
-```bash
-flatpak install -y org.bootcinstaller.Installer
-```
-
-2. Launch the installer:
-
-```bash
-flatpak run org.bootcinstaller.Installer
-```
-
-3. The installer shows your image pre-selected with sensible defaults:
-   - Hostname: `test-niri`
-   - Filesystem: Btrfs with subvolumes
-   - Encryption: None (can be enabled in UI)
-   - Bootloader: GRUB2
-
-4. Configure disk, user, and any additional options, then install.
-
-### Pre-configured defaults
-
-The image ships with `/etc/tuna-installer/recipe.json` and `/etc/tuna-installer/images.json` that pre-fill the installer with your branding and recommended settings. Edit these files in the Containerfile if you want different defaults.
-
-### Unattended installation
-
-For fully automated installs (e.g., on a custom liveISO):
-
-```bash
-flatpak run org.bootcinstaller.Installer --autoinstall /etc/tuna-installer/recipe.json
 ```

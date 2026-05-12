@@ -2,6 +2,13 @@
 gnome-shell
 gdm
 gnome-session
+btrfs-progs
+mesa-libGLU
+mesa-vulkan-drivers
+mesa-libgbm
+mesa-libGL
+mesa-dri-drivers
+vulkan-tools
 
 # Everyday desktop apps
 gnome-terminal
