@@ -1,6 +1,8 @@
 name: Publish bootc image to GHCR
 
 on:
+  schedule:
+    - cron: "0 9 * * *"
   push:
     branches:
       - main
