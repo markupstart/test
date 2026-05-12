@@ -1,0 +1,10 @@
+{
+  "hostname": "test-niri",
+  "filesystem": "btrfs",
+  "btrfsSubvolumes": true,
+  "encryption": { "type": "none" },
+  "selinuxDisabled": false,
+  "unifiedStorage": true,
+  "composeFsBackend": false,
+  "bootloader": "grub2"
+}

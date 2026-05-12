@@ -1,0 +1,23 @@
+{
+  "default_image": "ghcr.io/YOUR_USER/test:latest",
+  "fallback_flatpaks": [],
+  "images": [
+    {
+      "name": "test-niri",
+      "icon": "/usr/share/pixmaps/gnome-shell.png",
+      "needs_user_creation": true,
+      "children": [
+        {
+          "name": "Latest",
+          "imgref": "ghcr.io/markupstart/test:latest",
+          "desc": "Latest stable build"
+        },
+        {
+          "name": "Main Branch",
+          "imgref": "ghcr.io/markupstart/test:main",
+          "desc": "Latest from main branch"
+        }
+      ]
+    }
+  ]
+}
