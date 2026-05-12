@@ -15,7 +15,6 @@ NetworkManager-wifi
 blueman
 pavucontrol
 git
-btop
 micro
 zsh
 zsh-syntax-highlighting
