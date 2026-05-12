@@ -17,4 +17,4 @@ password = "$6$WfEZ.xvliXIPsc6P$QiRNZPLCUHhptT4nJnfgajq7tDEMbius8tj.2VAbOFHs02u8
 
 [[customizations.filesystem]]
 mountpoint = "/"
-minsize = "30 GiB"
+minsize = "14 GiB"
