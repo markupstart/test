@@ -1,6 +1,6 @@
 # Core desktop session (GNOME)
 gnome-shell
-gdm
+lightdm
 gnome-session
 btrfs-progs
 mesa-libGLU
