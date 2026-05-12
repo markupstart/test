@@ -17,7 +17,7 @@ if [[ -f .env ]]; then
 fi
 
 BASE_IMAGE="${BASE_IMAGE:-quay.io/hummingbird-community/bootc-os:latest}"
-IMAGE_NAME="${IMAGE_NAME:-localhost/bootc-desktop:latest}"
+IMAGE_NAME="${IMAGE_NAME:-localhost/test:latest}"
 ENABLE_FEDORA_RAWHIDE_REPO="${ENABLE_FEDORA_RAWHIDE_REPO:-0}"
 COPR_REPO="${COPR_REPO:-}"
 COPR_CHROOT="${COPR_CHROOT:-}"

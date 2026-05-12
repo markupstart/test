@@ -1,4 +1,4 @@
-# bootc-desktop
+# test
 
 A starter project to extend the base bootc image from:
 
@@ -55,7 +55,7 @@ docker compose build
 ## Build directly
 
 ```bash
-docker build -f Containerfile -t localhost/bootc-desktop:latest .
+docker build -f Containerfile -t localhost/test:latest .
 ```
 
 ## User Creation (Recommended)
@@ -68,7 +68,7 @@ For bootc images, create login users at install/image-build time with a blueprin
 Example with `bootc-image-builder`:
 
 ```bash
-docker save localhost/bootc-desktop:latest | podman load
+docker save localhost/test:latest | podman load
 
 podman run --rm --privileged \
 	--pull=never \
@@ -81,7 +81,7 @@ podman run --rm --privileged \
 	--type qcow2 \
 	--rootfs ext4 \
 	--use-librepo=True \
-	localhost/bootc-desktop:latest
+	localhost/test:latest
 ```
 
 Before running, replace the placeholder password hash or SSH key and set your preferred username.
@@ -123,7 +123,7 @@ docker build \
 	--build-arg COPR_REPO=owner/project \
 	--build-arg COPR_CHROOT=fedora-rawhide-x86_64 \
 	-f Containerfile \
-	-t localhost/bootc-desktop:latest .
+	-t localhost/test:latest .
 ```
 
 ## Customization Tips
@@ -140,7 +140,7 @@ docker build \
 - Push your image to a registry:
 
 ```bash
-docker push localhost/bootc-desktop:latest
+docker push localhost/test:latest
 ```
 
 - Use your resulting image with your bootc deployment flow.

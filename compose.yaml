@@ -1,5 +1,5 @@
 services:
-  bootc-desktop:
+  test:
     build:
       context: .
       dockerfile: Containerfile
@@ -8,4 +8,4 @@ services:
         ENABLE_FEDORA_RAWHIDE_REPO: ${ENABLE_FEDORA_RAWHIDE_REPO:-0}
         COPR_REPO: ${COPR_REPO:-}
         COPR_CHROOT: ${COPR_CHROOT:-}
-    image: ${IMAGE_NAME:-localhost/bootc-desktop:latest}
+    image: ${IMAGE_NAME:-localhost/test:latest}

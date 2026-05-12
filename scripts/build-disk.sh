@@ -11,7 +11,7 @@ if [[ -f .env ]]; then
   source .env
 fi
 
-IMAGE_NAME="${IMAGE_NAME:-localhost/bootc-desktop:latest}"
+IMAGE_NAME="${IMAGE_NAME:-localhost/test:latest}"
 BUILD_CONFIG="${BUILD_CONFIG:-blueprint/user-example.toml}"
 OUTPUT_DIR="${OUTPUT_DIR:-output}"
 ROOTFS="${ROOTFS:-ext4}"
