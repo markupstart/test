@@ -31,7 +31,6 @@ rocm-hip
 rocm-opencl
 rocm-device-libs
 distrobox
-podman
 wl-clipboard
 cups
 cups-filters
@@ -51,13 +50,10 @@ gvfs-goa
 gvfs-afp
 engrampa
 tumbler
-curl
 wget
 docker-cli
 containerd
 docker-compose
-gcc
-gcc-c++
 git-credential-libsecret
 
 # Optional: uncomment if available in your base distro repos
