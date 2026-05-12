@@ -1,0 +1,21 @@
+# Core desktop session (GNOME)
+gnome-shell
+gdm
+gnome-session
+
+# Everyday desktop apps
+gnome-terminal
+nautilus
+firefox
+flatpak
+fastfetch
+
+# System and hardware tools
+NetworkManager-wifi
+blueman
+pavucontrol
+git
+
+# Optional: uncomment if available in your base distro repos
+niri
+dms

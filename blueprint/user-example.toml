@@ -1,0 +1,20 @@
+# bootc-image-builder blueprint example
+# Creates an initial admin user in the installed disk image.
+
+[[customizations.user]]
+name = "mark"
+description = "mark"
+groups = ["wheel"]
+home = "/home/mark"
+shell = "/bin/bash"
+
+# Choose at least one login method before building:
+# 1) Preferred: SSH public key
+# key = "ssh-ed25519 AAAA... replace-with-your-public-key"
+
+# 2) Temporary testing: password hash (not plain text)
+password = "$6$WfEZ.xvliXIPsc6P$QiRNZPLCUHhptT4nJnfgajq7tDEMbius8tj.2VAbOFHs02u85hXPHYXifK13YhQKx5q8XCaX9gBjzvAXHbUc4/"
+
+[[customizations.filesystem]]
+mountpoint = "/"
+minsize = "30 GiB"
