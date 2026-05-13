@@ -12,6 +12,8 @@ vulkan-tools
 plymouth
 libwayland-egl
 amd-gpu-firmware
+systemd-udev
+seatd
 
 # Everyday desktop apps
 gnome-terminal
