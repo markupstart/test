@@ -1,6 +1,6 @@
 # Core desktop session (GNOME)
 gnome-shell
-gdm
+lightdm
 gnome-session
 btrfs-progs
 mesa-libGLU
@@ -9,6 +9,15 @@ mesa-libgbm
 mesa-libGL
 mesa-dri-drivers
 vulkan-tools
+plymouth
+libwayland-egl
+amd-gpu-firmware
+systemd-udev
+seatd
+pipewire
+wireplumber
+pipewire-pulseaudio
+pipewire-utils
 
 # Everyday desktop apps
 gnome-terminal
