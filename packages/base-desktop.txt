@@ -10,6 +10,8 @@ mesa-libGL
 mesa-dri-drivers
 vulkan-tools
 plymouth
+libwayland-egl
+amd-gpu-firmware
 
 # Everyday desktop apps
 gnome-terminal
