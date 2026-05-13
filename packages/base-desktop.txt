@@ -14,10 +14,6 @@ libwayland-egl
 amd-gpu-firmware
 systemd-udev
 seatd
-pipewire
-wireplumber
-pipewire-pulseaudio
-pipewire-utils
 
 # Everyday desktop apps
 gnome-terminal
