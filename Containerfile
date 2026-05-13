@@ -4,6 +4,8 @@ FROM ${BASE_IMAGE}
 ARG ENABLE_FEDORA_RAWHIDE_REPO=0
 ARG COPR_REPO=
 ARG COPR_CHROOT=
+ARG COPR_REPO2=
+ARG COPR_CHROOT2=
 
 RUN set -eux; \
     if [ "${ENABLE_FEDORA_RAWHIDE_REPO}" = "1" ]; then \
@@ -28,6 +30,23 @@ RUN set -eux; \
                 dnf -y copr enable "${COPR_REPO}" "${COPR_CHROOT}"; \
             else \
                 dnf -y copr enable "${COPR_REPO}"; \
+            fi; \
+            dnf clean all; \
+            rm -rf /var/cache/dnf; \
+        fi
+
+RUN set -eux; \
+        if [ -n "${COPR_REPO2}" ]; then \
+            if ! dnf -y copr --help >/dev/null 2>&1; then \
+                dnf -y install 'dnf5-command(copr)' \
+                    || dnf -y install 'dnf-command(copr)' \
+                    || dnf -y install dnf5-plugins \
+                    || dnf -y install dnf-plugins-core; \
+            fi; \
+            if [ -n "${COPR_CHROOT2}" ]; then \
+                dnf -y copr enable "${COPR_REPO2}" "${COPR_CHROOT2}"; \
+            else \
+                dnf -y copr enable "${COPR_REPO2}"; \
             fi; \
             dnf clean all; \
             rm -rf /var/cache/dnf; \
