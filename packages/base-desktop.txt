@@ -74,4 +74,5 @@ git-credential-libsecret
 # Optional: uncomment if available in your base distro repos
 niri
 dms
+ghostty
 
