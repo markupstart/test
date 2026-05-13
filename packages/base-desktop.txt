@@ -38,6 +38,7 @@ zoxide
 swayimg
 eza
 qemu
+virt-manager
 darktable
 just
 rocminfo
