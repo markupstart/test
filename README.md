@@ -1,10 +1,10 @@
 # test
 
-A starter project to extend the base bootc image from:
+A project to extend the base image from:
 
 - `quay.io/hummingbird-community/bootc-os`
 
-This project layers desktop packages on top of that base image and produces a new bootc image tag.
+This project layers desktop packages on top of that base image and produces a new image tag.
 
 ## Project Layout
 
